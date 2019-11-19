@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+<script>
+var aud = document.getElementById("dj");
+function questionOne() {
+	var txt;
+	var isBreak = false;
+	var awnser;
+	
+	while(isBreak == false) 
+	{
+		awnser = prompt("Was ist gelb, besteht aus 3 Teilen und bildet ein ganzes Gleichgewicht?");
+		if(awnser == "Try Force") 
+		{
+			txt = "Congratulations.... you wasted your time now lmao."
+			isBreak = true;
+		}
+	}
+	
+  document.getElementById("wow").innerHTML = txt;
+}
+</script>
+</body>
+<h1>Du hast es geschafft tapferer Held</h1>
+<h2>Nun löse das Rätsel und passiere den Weg</h2>
+<button onclick="questionOne()">Try it</button>
+
+<h1 id="wow"></h1>
+
+<audio id="dj" controls autoplay>
+  <source src="legend-of-zelda-orarina-of-time-opening-a-large-treasure-chest.ogg" type="audio/ogg">
+  <source src="legend-of-zelda-orarina-of-time-opening-a-large-treasure-chest.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+</html>

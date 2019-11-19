@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<style> 
+#cf {
+	height:200px;
+	width:200px;
+}
+
+#cf img{
+	position:absolute;
+	transition: opacity 1s ease-in-out;
+	height:200px;
+	width:400px;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+
+<!-- Animations
+#cf2 img.bottom{
+	height:200px;
+	width:400px;
+}-->
+
+#cf2 img.top {
+height:200px;
+width:400px;
+
+position:relative;
+animation-name: example;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 4s;
+animation-direction: alternate-reverse;
+}
+
+@keyframes example 
+{
+	<!--0% {
+	opacity:1;
+	}
+	45% {
+	opacity:1;
+	}
+	55% {
+	opacity:0;
+	}
+	100% {
+	opacity:0;
+	}-->
+  0%   {left:0px; top:0px;	opacity:1;}
+  25%  {left:200px; top:0px;}
+  45%  {opacity:1;}
+  50%  {left:200px; top:200px;}
+  55%  {opacity:0;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;	opacity:0;}
+}
+
+div.a img.top {
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari 3-8 */
+  transform: rotate(20deg);
+  
+}
+
+div.b img.top {
+  -ms-transform: skewY(20deg); /* IE 9 */
+  -webkit-transform: skewY(20deg); /* Safari 3-8 */
+  transform: skewY(20deg);
+}
+
+#cf_onclick {
+	window.open("EasterEgg.html");
+}
+
+#shadowImg {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+</style>
+</head>
+
+<body>
+<script>
+function openEasterEgg() {
+	window.open("EasterEgg.html");
+}
+</script>
+
+<h1>The transition Property</h1>
+<p>CSS transitions allows you to change property values smoothly, over a given duration.Mouse over the element below to see a CSS transition effect:</p>
+<p>Hover over the div element below, to see the transition effect:</p>
+<div id="cf">
+  <img class="bottom" src="WindowsXP.jpg" />
+  <img class="top" src="programing.jpg" />
+</div>
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<h1>Animations</h1>
+
+<div id="cf2">
+  <!--<img class="bottom" src="WindowsXP.jpg" />-->
+  <img class="top" src="programing.jpg" />
+</div>
+<button onclick="openEasterEgg()" id="cf_onclick">Click me to Goggle</button>
+
+<h1>Transformations</h1>
+
+<h2>Transformiere: rotiere(20°):</h2>
+<br></br>
+<div class="a">
+  <img class="top" src="programing.jpg" width="200" height="200">
+</div>
+<br></br>
+
+<h2>Transformiere: neige Y-Achse(skewY)(20deg):</h2>
+<br></br>
+<div class="b">
+  <img class="top" src="programing.jpg" width="200" height="200">
+</div>
+<br></br>
+
+<h1>Shadows</h1>
+<br></br>
+<div id="shadowImg">
+  <img class="top" src="programing.jpg" width="50" height="300" style="width:100%">
+</div>
+<br></br>
+
+</body>
+</html>
